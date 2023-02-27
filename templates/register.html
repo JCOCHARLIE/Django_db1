@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+</head>
+<body>
+
+<div class="col-sm-4"></div>
+
+<div class="col-sm-4">
+    <h1>Register Form</h1>
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    {{ reg_form.as_p }}
+    <input type="submit" name="LA" value="Register">
+
+</form>
+
+{% if submit_button ==  "Register"%}
+    {{ name }}
+    {{ email }}
+
+{% endif %}
+
+</div>
+
+<div class="col-sm-4"></div>
+
+</body>
+</html>
